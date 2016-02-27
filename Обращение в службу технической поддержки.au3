@@ -1,9 +1,9 @@
 #pragma compile(ProductVersion, 2.0)
 #pragma compile(UPX, true)
-#pragma compile(CompanyName, 'ООО Клиника ЛМС')
-#pragma compile(FileDescription, Программа для создания и отправки обращения в службу технической поддержки пользователей)
-#pragma compile(LegalCopyright, Грашкин Павел Павлович - Нижний Новгород - 31-55 - nn-admin@nnkk.budzdorov.su)
-#pragma compile(ProductName, Обращение в службу технической поддержки)
+#pragma compile(CompanyName, 'ГЋГЋГЋ ГЉГ«ГЁГ­ГЁГЄГ  Г‹ГЊГ‘')
+#pragma compile(FileDescription, ГЏГ°Г®ГЈГ°Г Г¬Г¬Г  Г¤Г«Гї Г±Г®Г§Г¤Г Г­ГЁГї ГЁ Г®ГІГЇГ°Г ГўГЄГЁ Г®ГЎГ°Г Г№ГҐГ­ГЁГї Гў Г±Г«ГіГ¦ГЎГі ГІГҐГµГ­ГЁГ·ГҐГ±ГЄГ®Г© ГЇГ®Г¤Г¤ГҐГ°Г¦ГЄГЁ ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«ГҐГ©)
+#pragma compile(LegalCopyright, ГѓГ°Г ГёГЄГЁГ­ ГЏГ ГўГҐГ« ГЏГ ГўГ«Г®ГўГЁГ· - ГЌГЁГ¦Г­ГЁГ© ГЌГ®ГўГЈГ®Г°Г®Г¤ - 31-55 - nn-admin@nnkk.budzdorov.su)
+#pragma compile(ProductName, ГЋГЎГ°Г Г№ГҐГ­ГЁГҐ Гў Г±Г«ГіГ¦ГЎГі ГІГҐГµГ­ГЁГ·ГҐГ±ГЄГ®Г© ГЇГ®Г¤Г¤ГҐГ°Г¦ГЄГЁ)
 
 #include <ButtonConstants.au3>
 #include <EditConstants.au3>
@@ -62,17 +62,17 @@ GUICtrlSetState(-1, $GUI_DROPACCEPTED)
 
 GUISetFont(10, $FW_NORMAL , 0, "Arial", $Form1, $CLEARTYPE_QUALITY)
 
-$Label1 = GUICtrlCreateLabel("Обращение в службу технической поддержки клиники Будь Здоров", 10, 10, 580, 20, $SS_CENTER)
+$Label1 = GUICtrlCreateLabel("ГЋГЎГ°Г Г№ГҐГ­ГЁГҐ Гў Г±Г«ГіГ¦ГЎГі ГІГҐГµГ­ГЁГ·ГҐГ±ГЄГ®Г© ГЇГ®Г¤Г¤ГҐГ°Г¦ГЄГЁ ГЄГ«ГЁГ­ГЁГЄГЁ ГЃГіГ¤Гј Г‡Г¤Г®Г°Г®Гў", 10, 10, 580, 20, $SS_CENTER)
 GUICtrlSetFont(-1, 11, $FW_SEMIBOLD)
 GUICtrlSetColor(-1, "0x3030AA")
-$Label5 = GUICtrlCreateLabel("внутренний номер: 603    для регионов: 30-494    городской: (495) 782-88-82", 10, 30, 580, 20, $SS_CENTER)
+$Label5 = GUICtrlCreateLabel("ГўГ­ГіГІГ°ГҐГ­Г­ГЁГ© Г­Г®Г¬ГҐГ°: 603    Г¤Г«Гї Г°ГҐГЈГЁГ®Г­Г®Гў: 30-494    ГЈГ®Г°Г®Г¤Г±ГЄГ®Г©: (495) 782-88-82", 10, 30, 580, 20, $SS_CENTER)
 GUICtrlSetColor(-1, $COLOR_GRAY)
 
-$Group1 = GUICtrlCreateGroup("Укажите информацию о себе:", 10, 70, 580, 124)
+$Group1 = GUICtrlCreateGroup("Г“ГЄГ Г¦ГЁГІГҐ ГЁГ­ГґГ®Г°Г¬Г Г¶ГЁГѕ Г® Г±ГҐГЎГҐ:", 10, 70, 580, 124)
 GUICtrlSetFont(-1, 10,  $FW_SEMIBOLD)
 GUICtrlSetResizing(-1, $GUI_DOCKALL)
 
-$Label2 = GUICtrlCreateLabel("Контактный номер телефона:", 20, 103, 180, 20, $SS_RIGHT)
+$Label2 = GUICtrlCreateLabel("ГЉГ®Г­ГІГ ГЄГІГ­Г»Г© Г­Г®Г¬ГҐГ° ГІГҐГ«ГҐГґГ®Г­Г :", 20, 103, 180, 20, $SS_RIGHT)
 GUICtrlSetResizing(-1, $GUI_DOCKALL)
 $Input1 = GUICtrlCreateInput("", 210, 100, 363, 24)
 GUICtrlSetResizing(-1, $GUI_DOCKALL)
@@ -80,7 +80,7 @@ If $telephoneNumber <> "" Then
    GUICtrlSetData(-1, $telephoneNumber)
 EndIf
 
-$Label3 = GUICtrlCreateLabel("Номер кабинета:", 20, 133, 180, 20, $SS_RIGHT)
+$Label3 = GUICtrlCreateLabel("ГЌГ®Г¬ГҐГ° ГЄГ ГЎГЁГ­ГҐГІГ :", 20, 133, 180, 20, $SS_RIGHT)
 GUICtrlSetResizing(-1, $GUI_DOCKALL)
 $Input2 = GUICtrlCreateInput("", 210, 130, 363, 24)
 GUICtrlSetResizing(-1, $GUI_DOCKALL)
@@ -88,7 +88,7 @@ If $physicalDeliveryOfficeName <> "" Then
    GUICtrlSetData(-1, $physicalDeliveryOfficeName)
 EndIf
 
-$Label4 = GUICtrlCreateLabel("ФИО:", 20, 163, 180, 20, $SS_RIGHT)
+$Label4 = GUICtrlCreateLabel("Г”Г€ГЋ:", 20, 163, 180, 20, $SS_RIGHT)
 GUICtrlSetResizing(-1, $GUI_DOCKALL)
 $Input3 = GUICtrlCreateInput("", 210, 160, 363, 24)
 GUICtrlSetResizing(-1, $GUI_DOCKALL)
@@ -100,7 +100,7 @@ EndIf
 
 GUICtrlCreateGroup("", -99, -99, 1, 1)
 
-$Group2 = GUICtrlCreateGroup("Текст вашего обращения:", 10, 200, 580, 190)
+$Group2 = GUICtrlCreateGroup("Г’ГҐГЄГ±ГІ ГўГ ГёГҐГЈГ® Г®ГЎГ°Г Г№ГҐГ­ГЁГї:", 10, 200, 580, 190)
 GUICtrlSetResizing(-1, $GUI_DOCKALL)
 GUICtrlSetFont(-1, 10,  $FW_SEMIBOLD)
 $Edit1 = GUICtrlCreateEdit("", 20, 230, 560, 150, BitOR($ES_AUTOVSCROLL,$ES_WANTRETURN,$WS_VSCROLL))
@@ -108,17 +108,17 @@ GUICtrlSetResizing(-1, $GUI_DOCKALL)
 GUICtrlSetState(-1, $GUI_FOCUS)
 GUICtrlCreateGroup("", -99, -99, 1, 1)
 
-$ButtonAddFiles = GUICtrlCreateButton("Вложить файл", 9, 400, 82, 40, $BS_MULTILINE)
+$ButtonAddFiles = GUICtrlCreateButton("Г‚Г«Г®Г¦ГЁГІГј ГґГ Г©Г«", 9, 400, 82, 40, $BS_MULTILINE)
 GUICtrlSetResizing(-1, BitOr($GUI_DOCKBOTTOM, $GUI_DOCKWIDTH, $GUI_DOCKHEIGHT))
 GUICtrlSetFont(-1, Default, $FW_LIGHT)
 
 Local $prevButPos = ControlGetPos($Form1, "", $ButtonAddFiles)
-$ButtonScreenshot = GUICtrlCreateButton("Сделать cнимок экрана", $prevButPos[0] + $prevButPos[2] + 13, _
+$ButtonScreenshot = GUICtrlCreateButton("Г‘Г¤ГҐГ«Г ГІГј cГ­ГЁГ¬Г®ГЄ ГЅГЄГ°Г Г­Г ", $prevButPos[0] + $prevButPos[2] + 13, _
 $prevButPos[1], 130, $prevButPos[3], $BS_MULTILINE)
 GUICtrlSetResizing(-1, BitOr($GUI_DOCKBOTTOM, $GUI_DOCKWIDTH, $GUI_DOCKHEIGHT))
 GUICtrlSetFont(-1, Default, $FW_LIGHT)
 
-$ButtonSend = GUICtrlCreateButton("Отправить обращение", 411, 400, 180, 40)
+$ButtonSend = GUICtrlCreateButton("ГЋГІГЇГ°Г ГўГЁГІГј Г®ГЎГ°Г Г№ГҐГ­ГЁГҐ", 411, 400, 180, 40)
 GUICtrlSetResizing(-1, BitOr($GUI_DOCKBOTTOM, $GUI_DOCKWIDTH, $GUI_DOCKHEIGHT))
 GUICtrlSetFont(-1, Default, $FW_HEAVY)
 
@@ -139,19 +139,19 @@ While 1
 		 Local $tempString = ""
 
 		 If GUICtrlRead ($Input1) = "" Then
-			$tempString = $tempString & "Необходимо указать контактный номер телефона" & @CRLF
+			$tempString = $tempString & "ГЌГҐГ®ГЎГµГ®Г¤ГЁГ¬Г® ГіГЄГ Г§Г ГІГј ГЄГ®Г­ГІГ ГЄГІГ­Г»Г© Г­Г®Г¬ГҐГ° ГІГҐГ«ГҐГґГ®Г­Г " & @CRLF
 		 EndIf
 
 		 If GUICtrlRead ($Input2) = "" Then
-			$tempString = $tempString & "Необходимо указать номер кабинета" & @CRLF
+			$tempString = $tempString & "ГЌГҐГ®ГЎГµГ®Г¤ГЁГ¬Г® ГіГЄГ Г§Г ГІГј Г­Г®Г¬ГҐГ° ГЄГ ГЎГЁГ­ГҐГІГ " & @CRLF
 		 EndIf
 
 		 If GUICtrlRead ($Input3) = "" Then
-			$tempString = $tempString & "Необходимо указать ФИО" & @CRLF
+			$tempString = $tempString & "ГЌГҐГ®ГЎГµГ®Г¤ГЁГ¬Г® ГіГЄГ Г§Г ГІГј Г”Г€ГЋ" & @CRLF
 		 EndIf
 
 		 If GUICtrlRead ($Edit1) = "" Then
-			$tempString = $tempString & "Необходимо написать текст обращения" & @CRLF
+			$tempString = $tempString & "ГЌГҐГ®ГЎГµГ®Г¤ГЁГ¬Г® Г­Г ГЇГЁГ±Г ГІГј ГІГҐГЄГ±ГІ Г®ГЎГ°Г Г№ГҐГ­ГЁГї" & @CRLF
 		 EndIf
 
 		 If $tempString <> "" Then
@@ -160,8 +160,8 @@ While 1
 			Local $needToSendAttachments = True
 ;~ 			   ConsoleWrite($totalSize)
 			If $totalSize / 1024 > 10000 Then
-			   Local $answer = MsgBox(BitOr($MB_ICONQUESTION, $MB_YESNO), "Превышен допустимый размер вложений", _
-				  "Продолжить отправку обращения без вложенных файлов?")
+			   Local $answer = MsgBox(BitOr($MB_ICONQUESTION, $MB_YESNO), "ГЏГ°ГҐГўГ»ГёГҐГ­ Г¤Г®ГЇГіГ±ГІГЁГ¬Г»Г© Г°Г Г§Г¬ГҐГ° ГўГ«Г®Г¦ГҐГ­ГЁГ©", _
+				  "ГЏГ°Г®Г¤Г®Г«Г¦ГЁГІГј Г®ГІГЇГ°Г ГўГЄГі Г®ГЎГ°Г Г№ГҐГ­ГЁГї ГЎГҐГ§ ГўГ«Г®Г¦ГҐГ­Г­Г»Гµ ГґГ Г©Г«Г®Гў?")
 			   Switch $answer
 			   Case $IDYES
 				  $needToSendAttachments = False
@@ -175,8 +175,8 @@ While 1
 	  Case $ButtonScreenshot
 		 CreateScreenshotWindow()
 	  Case $ButtonAddFiles
-		 Local $filesString = FileOpenDialog("Выберите файлы для отправки", _
-			Default, "Все(*)", BitOR($FD_FILEMUSTEXIST, $FD_MULTISELECT), "", $Form1)
+		 Local $filesString = FileOpenDialog("Г‚Г»ГЎГҐГ°ГЁГІГҐ ГґГ Г©Г«Г» Г¤Г«Гї Г®ГІГЇГ°Г ГўГЄГЁ", _
+			Default, "Г‚Г±ГҐ(*)", BitOR($FD_FILEMUSTEXIST, $FD_MULTISELECT), "", $Form1)
 
 		 If @error <> 0 Or $filesString = "" Then
 			ContinueLoop
@@ -186,12 +186,12 @@ While 1
 	  Case $deleteButton
 		 Local $selected = GUICtrlRead(GUICtrlRead($listView), 2)
 		 If $selected == 0 Then
-			MsgBox($MB_ICONINFORMATION, "", "Необходимо выбрать вложение для удаления")
+			MsgBox($MB_ICONINFORMATION, "", "ГЌГҐГ®ГЎГµГ®Г¤ГЁГ¬Г® ГўГ»ГЎГ°Г ГІГј ГўГ«Г®Г¦ГҐГ­ГЁГҐ Г¤Г«Гї ГіГ¤Г Г«ГҐГ­ГЁГї")
 		 Else
 			Local $tmp = StringSplit($selected, "|")
 			$selected = $tmp[1]
-			Local $answer = MsgBox(BitOR($MB_ICONQUESTION, $MB_YESNO), "", "Вы действительно хотите удалить " & _
-			   "из вложения файл?" & @CRLF & @CRLF & $selected)
+			Local $answer = MsgBox(BitOR($MB_ICONQUESTION, $MB_YESNO), "", "Г‚Г» Г¤ГҐГ©Г±ГІГўГЁГІГҐГ«ГјГ­Г® ГµГ®ГІГЁГІГҐ ГіГ¤Г Г«ГЁГІГј " & _
+			   "ГЁГ§ ГўГ«Г®Г¦ГҐГ­ГЁГї ГґГ Г©Г«?" & @CRLF & @CRLF & $selected)
 			If $answer = $IDYES Then
 			   _GUICtrlListView_DeleteItemsSelected($listView)
 			   GUICtrlSetState($deleteButton, $GUI_DISABLE)
@@ -214,7 +214,7 @@ While 1
 			   Next
 
 			   If $totalSize / 1024 <= 10000 Then
-				  GUICtrlSetData($attachmentsListGroup, "Список вложений:")
+				  GUICtrlSetData($attachmentsListGroup, "Г‘ГЇГЁГ±Г®ГЄ ГўГ«Г®Г¦ГҐГ­ГЁГ©:")
 				  GUICtrlSetBkColor($attachmentsListGroup, $CLR_NONE)
 			   EndIf
 			EndIf
@@ -222,8 +222,8 @@ While 1
 	  Case $GUI_EVENT_DROPPED
 		 If UBound($__aGUIDropFiles) == 2 Then
 			If StringInStr(FileGetAttrib($__aGUIDropFiles[1]), "D") Then
-			   MsgBox($MB_ICONWARNING, "", "Вложениями могут быть только файлы или объекты. " & $__aGUIDropFiles[1] & _
-				  " - папка и не может быть вложением.")
+			   MsgBox($MB_ICONWARNING, "", "Г‚Г«Г®Г¦ГҐГ­ГЁГїГ¬ГЁ Г¬Г®ГЈГіГІ ГЎГ»ГІГј ГІГ®Г«ГјГЄГ® ГґГ Г©Г«Г» ГЁГ«ГЁ Г®ГЎГєГҐГЄГІГ». " & $__aGUIDropFiles[1] & _
+				  " - ГЇГ ГЇГЄГ  ГЁ Г­ГҐ Г¬Г®Г¦ГҐГІ ГЎГ»ГІГј ГўГ«Г®Г¦ГҐГ­ГЁГҐГ¬.")
 			Else
 			ParseFilesToAdd($__aGUIDropFiles[1])
 		 EndIf
@@ -242,8 +242,8 @@ While 1
 			Next
 
 			If $errorStr <> "" Then
-			   MsgBox($MB_ICONWARNING, "", "Вложениями могут быть только файлы или объекты. " & @CRLF & _
-				  $errorStr & " - папка(и) и не может быть вложением.")
+			   MsgBox($MB_ICONWARNING, "", "Г‚Г«Г®Г¦ГҐГ­ГЁГїГ¬ГЁ Г¬Г®ГЈГіГІ ГЎГ»ГІГј ГІГ®Г«ГјГЄГ® ГґГ Г©Г«Г» ГЁГ«ГЁ Г®ГЎГєГҐГЄГІГ». " & @CRLF & _
+				  $errorStr & " - ГЇГ ГЇГЄГ (ГЁ) ГЁ Г­ГҐ Г¬Г®Г¦ГҐГІ ГЎГ»ГІГј ГўГ«Г®Г¦ГҐГ­ГЁГҐГ¬.")
 			EndIf
 
 			If $resultStr <> "" Then ParseFilesToAdd($resultStr)
@@ -301,16 +301,16 @@ Func CreateScreenshotWindow()
    GUISetState(@SW_SHOW, $Form3)
    GUISetCursor(3, 1, $Form3)
 
-   Local $Form2 = GUICreate("Создание снимка экрана", 400, 56, -1, -1, -1, $WS_EX_TOOLWINDOW + $WS_EX_TOPMOST, $Form1)
+   Local $Form2 = GUICreate("Г‘Г®Г§Г¤Г Г­ГЁГҐ Г±Г­ГЁГ¬ГЄГ  ГЅГЄГ°Г Г­Г ", 400, 56, -1, -1, -1, $WS_EX_TOOLWINDOW + $WS_EX_TOPMOST, $Form1)
    GUISetFont(10, $FW_NORMAL , 0, "Arial", $Form2, $CLEARTYPE_QUALITY)
-   Local $cancelButton = GUICtrlCreateButton("Отмена", 8, 8, 78, 40)
+   Local $cancelButton = GUICtrlCreateButton("ГЋГІГ¬ГҐГ­Г ", 8, 8, 78, 40)
    GUICtrlSetResizing(-1, BitOR($GUI_DOCKTOP, $GUI_DOCKLEFT, $GUI_DOCKSIZE))
-   Local $contButton = GUICtrlCreateButton("Продолжить", 278, 8, 114, 40)
+   Local $contButton = GUICtrlCreateButton("ГЏГ°Г®Г¤Г®Г«Г¦ГЁГІГј", 278, 8, 114, 40)
    GUICtrlSetResizing(-1, BitOR($GUI_DOCKTOP, $GUI_DOCKRIGHT, $GUI_DOCKSIZE))
    GUICtrlSetFont(-1, Default, $FW_HEAVY)
    GUICtrlSetState(-1, $GUI_HIDE)
 
-   Local $labelMouse = GUICtrlCreateLabel("Выделите мышью нужную область экрана", _
+   Local $labelMouse = GUICtrlCreateLabel("Г‚Г»Г¤ГҐГ«ГЁГІГҐ Г¬Г»ГёГјГѕ Г­ГіГ¦Г­ГіГѕ Г®ГЎГ«Г Г±ГІГј ГЅГЄГ°Г Г­Г ", _
 	  86, 19, 314, 40, $SS_CENTER)
    GUICtrlSetFont(-1, Default, $FW_HEAVY)
 
@@ -341,13 +341,13 @@ Func CreateScreenshotWindow()
 			Mark_Rect()
 
 			If Abs($iX1 - $iX2) < 10 Or Abs($iY1 - $iY2) < 10 Then
-			   GUICtrlSetData($labelMouse, "Выделена слишком маленькая область экрана, попробуйте снова")
+			   GUICtrlSetData($labelMouse, "Г‚Г»Г¤ГҐГ«ГҐГ­Г  Г±Г«ГЁГёГЄГ®Г¬ Г¬Г Г«ГҐГ­ГјГЄГ Гї Г®ГЎГ«Г Г±ГІГј ГЅГЄГ°Г Г­Г , ГЇГ®ГЇГ°Г®ГЎГіГ©ГІГҐ Г±Г­Г®ГўГ ")
 			   GUICtrlSetPos($labelMouse, 86, 10, 314, 40)
 			   GUISetState(@SW_SHOW, $Form2)
 			   ContinueLoop
 			EndIf
 
-			$shotPath = @TempDir & "\Снимок_экрана_" & @YEAR & "-" & @MON & "-" & @MDAY & _
+			$shotPath = @TempDir & "\Г‘Г­ГЁГ¬Г®ГЄ_ГЅГЄГ°Г Г­Г _" & @YEAR & "-" & @MON & "-" & @MDAY & _
 			   "_" & @HOUR & "-" & @MIN & "-" & @SEC & ".jpg"
 
 			GUIDelete($Form3)
@@ -519,12 +519,12 @@ Func ParseFilesToAdd($files)
 			   Local $fileName = _PathSplit($choosenFiles[1], "", "", "", "")
 			   Local $fileSize = FileGetSize($choosenFiles[1]) / 1024
 			   If $fileSize > 10000 Then
-				  MsgBox($MB_ICONWARNING, "Внимание!", "Размер файла" & @CRLF & @CRLF & $fileName[3] & $fileName[4] & _
-					 "' (" & StringFormat("%.2f", $fileSize) & " Кб)" & @CRLF & @CRLF & _
-					 "превышает допустимый размер." & _
-					 " Отправка файлов возможна, если их размер не превышает 10 000 Кб." & @CRLF & @CRLF & _
-					 "Попробуйте заархивировать файл или воспользоваться другим способом передачи" & _
-					 " (например через сетевую папку или через яндекс/мейл/гугл-диск")
+				  MsgBox($MB_ICONWARNING, "Г‚Г­ГЁГ¬Г Г­ГЁГҐ!", "ГђГ Г§Г¬ГҐГ° ГґГ Г©Г«Г " & @CRLF & @CRLF & $fileName[3] & $fileName[4] & _
+					 "' (" & StringFormat("%.2f", $fileSize) & " ГЉГЎ)" & @CRLF & @CRLF & _
+					 "ГЇГ°ГҐГўГ»ГёГ ГҐГІ Г¤Г®ГЇГіГ±ГІГЁГ¬Г»Г© Г°Г Г§Г¬ГҐГ°." & _
+					 " ГЋГІГЇГ°Г ГўГЄГ  ГґГ Г©Г«Г®Гў ГўГ®Г§Г¬Г®Г¦Г­Г , ГҐГ±Г«ГЁ ГЁГµ Г°Г Г§Г¬ГҐГ° Г­ГҐ ГЇГ°ГҐГўГ»ГёГ ГҐГІ 10 000 ГЉГЎ." & @CRLF & @CRLF & _
+					 "ГЏГ®ГЇГ°Г®ГЎГіГ©ГІГҐ Г§Г Г Г°ГµГЁГўГЁГ°Г®ГўГ ГІГј ГґГ Г©Г« ГЁГ«ГЁ ГўГ®Г±ГЇГ®Г«ГјГ§Г®ГўГ ГІГјГ±Гї Г¤Г°ГіГЈГЁГ¬ Г±ГЇГ®Г±Г®ГЎГ®Г¬ ГЇГҐГ°ГҐГ¤Г Г·ГЁ" & _
+					 " (Г­Г ГЇГ°ГЁГ¬ГҐГ° Г·ГҐГ°ГҐГ§ Г±ГҐГІГҐГўГіГѕ ГЇГ ГЇГЄГі ГЁГ«ГЁ Г·ГҐГ°ГҐГ§ ГїГ­Г¤ГҐГЄГ±/Г¬ГҐГ©Г«/ГЈГіГЈГ«-Г¤ГЁГ±ГЄ")
 			   Else
 				  _ArrayAdd($result, $fileName[3] & $fileName[4] & "|" & _
 					 StringFormat("%.2f", $fileSize) & "|" & $choosenFiles[1], Default, "/////")
@@ -546,18 +546,18 @@ Func ParseFilesToAdd($files)
 			Next
 
 			If UBound($tooBigFiles) > 0 Then
-			   Local $message = "Размер файла(ов)" & @CRLF & @CRLF
+			   Local $message = "ГђГ Г§Г¬ГҐГ° ГґГ Г©Г«Г (Г®Гў)" & @CRLF & @CRLF
 
 			   For $i = 0 to UBound($tooBigFiles) - 2 Step 2
-				  $message &= $tooBigFiles[$i] & "' (" & $tooBigFiles[$i + 1] & " Кб)" & @CRLF
+				  $message &= $tooBigFiles[$i] & "' (" & $tooBigFiles[$i + 1] & " ГЉГЎ)" & @CRLF
 			   Next
 
-			   $message &= @CRLF & "превышает допустимый размер." & _
-					 "  Отправка файлов возможна, если их размер не превышает 10 000 Кб." & @CRLF & @CRLF & _
-					 "Попробуйте заархивировать файл или воспользоваться другим способом передачи" & _
-					 " (например через сетевую папку или через яндекс/мейл/гугл-диск)"
+			   $message &= @CRLF & "ГЇГ°ГҐГўГ»ГёГ ГҐГІ Г¤Г®ГЇГіГ±ГІГЁГ¬Г»Г© Г°Г Г§Г¬ГҐГ°." & _
+					 "  ГЋГІГЇГ°Г ГўГЄГ  ГґГ Г©Г«Г®Гў ГўГ®Г§Г¬Г®Г¦Г­Г , ГҐГ±Г«ГЁ ГЁГµ Г°Г Г§Г¬ГҐГ° Г­ГҐ ГЇГ°ГҐГўГ»ГёГ ГҐГІ 10 000 ГЉГЎ." & @CRLF & @CRLF & _
+					 "ГЏГ®ГЇГ°Г®ГЎГіГ©ГІГҐ Г§Г Г Г°ГµГЁГўГЁГ°Г®ГўГ ГІГј ГґГ Г©Г« ГЁГ«ГЁ ГўГ®Г±ГЇГ®Г«ГјГ§Г®ГўГ ГІГјГ±Гї Г¤Г°ГіГЈГЁГ¬ Г±ГЇГ®Г±Г®ГЎГ®Г¬ ГЇГҐГ°ГҐГ¤Г Г·ГЁ" & _
+					 " (Г­Г ГЇГ°ГЁГ¬ГҐГ° Г·ГҐГ°ГҐГ§ Г±ГҐГІГҐГўГіГѕ ГЇГ ГЇГЄГі ГЁГ«ГЁ Г·ГҐГ°ГҐГ§ ГїГ­Г¤ГҐГЄГ±/Г¬ГҐГ©Г«/ГЈГіГЈГ«-Г¤ГЁГ±ГЄ)"
 
-			   MsgBox($MB_ICONWARNING, "Внимание!", $message)
+			   MsgBox($MB_ICONWARNING, "Г‚Г­ГЁГ¬Г Г­ГЁГҐ!", $message)
 			EndIf
 		 EndIf
 
@@ -571,18 +571,18 @@ Func ParseFilesToAdd($files)
 			Local $lastPos = WinGetPos($Form1)
 			WinMove($Form1, "", $lastPos[0], $lastPos[1], 606, 633)
 
-			$attachmentsListGroup = GUICtrlCreateGroup("Список вложений:", 10, 396, 580, 150)
+			$attachmentsListGroup = GUICtrlCreateGroup("Г‘ГЇГЁГ±Г®ГЄ ГўГ«Г®Г¦ГҐГ­ГЁГ©:", 10, 396, 580, 150)
 			GUICtrlSetFont(-1, 10,  $FW_SEMIBOLD)
 			GUICtrlSetResizing(-1, $GUI_DOCKALL)
 
-			$listView = GUICtrlCreateListView("Имя файла|Размер (Кб)|Полный путь", 20, 426, 560, 110)
+			$listView = GUICtrlCreateListView("Г€Г¬Гї ГґГ Г©Г«Г |ГђГ Г§Г¬ГҐГ° (ГЉГЎ)|ГЏГ®Г«Г­Г»Г© ГЇГіГІГј", 20, 426, 560, 110)
 			_GUICtrlListView_SetColumnWidth(-1, 0, 445)
 			_GUICtrlListView_SetColumnWidth(-1, 2, 0)
 			_GUICtrlListView_JustifyColumn(-1, 1, 1)
 			GUICtrlSetResizing(-1, $GUI_DOCKALL)
 
 			Local $prevButtonPos = ControlGetPos($Form1, "", $ButtonScreenshot)
-			$deleteButton = GUICtrlCreateButton("Удалить выбранное вложение", $prevButtonPos[0] + $prevButtonPos[2] + _
+			$deleteButton = GUICtrlCreateButton("Г“Г¤Г Г«ГЁГІГј ГўГ»ГЎГ°Г Г­Г­Г®ГҐ ГўГ«Г®Г¦ГҐГ­ГЁГҐ", $prevButtonPos[0] + $prevButtonPos[2] + _
 			13, $prevButtonPos[1], 151, $prevButtonPos[3], $BS_MULTILINE)
 			GUICtrlSetState(-1, $GUI_DISABLE)
 		 EndIf
@@ -599,7 +599,7 @@ Func ParseFilesToAdd($files)
 		 Next
 
 		 If $totalSize / 1024 > 10000 Then
-			GUICtrlSetData($attachmentsListGroup, "Список вложений: Превышен допустимый размер вложенных файлов (10 000 Кб)")
+			GUICtrlSetData($attachmentsListGroup, "Г‘ГЇГЁГ±Г®ГЄ ГўГ«Г®Г¦ГҐГ­ГЁГ©: ГЏГ°ГҐГўГ»ГёГҐГ­ Г¤Г®ГЇГіГ±ГІГЁГ¬Г»Г© Г°Г Г§Г¬ГҐГ° ГўГ«Г®Г¦ГҐГ­Г­Г»Гµ ГґГ Г©Г«Г®Гў (10 000 ГЉГЎ)")
 			GUICtrlSetBkColor($attachmentsListGroup, $COLOR_YELLOW)
 		 EndIf
 EndFunc
@@ -642,58 +642,58 @@ Func MY_WM_NOTIFY($hWnd, $Msg, $wParam, $lParam)
 EndFunc
 
 Func SendMessage($needToSendAttachments)
-   ProgressOn("", "Идет отправка.", "Пожалуйста, немного пожождите.", -1, -1, $DLG_MOVEABLE)
+   ProgressOn("", "Г€Г¤ГҐГІ Г®ГІГЇГ°Г ГўГЄГ .", "ГЏГ®Г¦Г Г«ГіГ©Г±ГІГ , Г­ГҐГ¬Г­Г®ГЈГ® ГЇГ®Г¦Г®Г¦Г¤ГЁГІГҐ.", -1, -1, $DLG_MOVEABLE)
    Local $message = GUICtrlRead($Edit1) & @CRLF
 
    Local $attachments = ""
    If $needToSendAttachments Then
-	  If _GUICtrlListView_GetItemCount($listView) > 0 Then $message &= @CRLF & @CRLF & "Список вложений:" & @CRLF
+	  If _GUICtrlListView_GetItemCount($listView) > 0 Then $message &= @CRLF & @CRLF & "Г‘ГЇГЁГ±Г®ГЄ ГўГ«Г®Г¦ГҐГ­ГЁГ©:" & @CRLF
 
 	  For $i = 0 To _GUICtrlListView_GetItemCount($listView) - 1
 		 Local $dataFromListView = _GUICtrlListView_GetItemTextArray($listView, $i)
-		 $message &= $dataFromListView[1] & " (" & $dataFromListView[2] & " Кб)" & @CRLF
+		 $message &= $dataFromListView[1] & " (" & $dataFromListView[2] & " ГЉГЎ)" & @CRLF
 		 $attachments &= $dataFromListView[3] & ";"
 	  Next
    EndIf
 
    ProgressSet(20)
 
-   $message &= @CRLF & @CRLF & "Инициатор:" & @TAB & @TAB & GUICtrlRead ($Input3) & @CRLF & _
-					 "Контактный тел.:" & @TAB & GUICtrlRead ($Input1) & @CRLF & _
-					 "Номер кабинета:" & @TAB & GUICtrlRead ($Input2) & @CRLF & @CRLF
+   $message &= @CRLF & @CRLF & "Г€Г­ГЁГ¶ГЁГ ГІГ®Г°:" & @TAB & @TAB & GUICtrlRead ($Input3) & @CRLF & _
+					 "ГЉГ®Г­ГІГ ГЄГІГ­Г»Г© ГІГҐГ«.:" & @TAB & GUICtrlRead ($Input1) & @CRLF & _
+					 "ГЌГ®Г¬ГҐГ° ГЄГ ГЎГЁГ­ГҐГІГ :" & @TAB & GUICtrlRead ($Input2) & @CRLF & @CRLF
 
    If $city <> "" Then
-	  $message = $message & "Подразделение:" & @TAB & $city & @CRLF
+	  $message = $message & "ГЏГ®Г¤Г°Г Г§Г¤ГҐГ«ГҐГ­ГЁГҐ:" & @TAB & $city & @CRLF
    EndIf
 
    If $department <> "" Then
-	  $message = $message & "Отдел:" & @TAB & @TAB & @TAB & $department & @CRLF
+	  $message = $message & "ГЋГІГ¤ГҐГ«:" & @TAB & @TAB & @TAB & $department & @CRLF
    EndIf
 
    If $title <> "" Then
-	  $message = $message & "Должность:" & @TAB & @TAB & $title & @CRLF
+	  $message = $message & "Г„Г®Г«Г¦Г­Г®Г±ГІГј:" & @TAB & @TAB & $title & @CRLF
    EndIf
 
    If $mail <> "" Then
-	  $message = $message & "Почта:" & @TAB & @TAB & @TAB & $mail & @CRLF
+	  $message = $message & "ГЏГ®Г·ГІГ :" & @TAB & @TAB & @TAB & $mail & @CRLF
    EndIf
 
    If $userPrincipalName <> "" Then
-	  $message = $message & "Учетная запись:" & @TAB & $userPrincipalName & @CRLF
+	  $message = $message & "Г“Г·ГҐГІГ­Г Гї Г§Г ГЇГЁГ±Гј:" & @TAB & $userPrincipalName & @CRLF
    EndIf
 
-   $message = $message & @CRLF & "Имя компьютера:" & @TAB & @ComputerName & @CRLF & _
-						"Имя пользователя:" & @TAB & @UserName & @CRLF & _
-						"Версия ОС:" & @TAB & @TAB & @OSVersion & @CRLF & _
-						"Архитектура ОС:" & @TAB & @OSArch & @CRLF & _
-						"IP адрес:" & @TAB & @TAB & @IPAddress1 & @CRLF & _
-						"Дата обращения:" & @TAB & @YEAR & "." & @MON & "." & @MDAY & "     " & @HOUR & ":" & @MIN
+   $message = $message & @CRLF & "Г€Г¬Гї ГЄГ®Г¬ГЇГјГѕГІГҐГ°Г :" & @TAB & @ComputerName & @CRLF & _
+						"Г€Г¬Гї ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«Гї:" & @TAB & @UserName & @CRLF & _
+						"Г‚ГҐГ°Г±ГЁГї ГЋГ‘:" & @TAB & @TAB & @OSVersion & @CRLF & _
+						"ГЂГ°ГµГЁГІГҐГЄГІГіГ°Г  ГЋГ‘:" & @TAB & @OSArch & @CRLF & _
+						"IP Г Г¤Г°ГҐГ±:" & @TAB & @TAB & @IPAddress1 & @CRLF & _
+						"Г„Г ГІГ  Г®ГЎГ°Г Г№ГҐГ­ГЁГї:" & @TAB & @YEAR & "." & @MON & "." & @MDAY & "     " & @HOUR & ":" & @MIN
 
    ProgressSet(30)
 
    If IsArray($arrPrinterList) Then
 	  If UBound($arrPrinterList) > 1 Then
-		 $message &= @CRLF & @CRLF & @CRLF & "Список установленных у пользователя принтеров:" & @CRLF
+		 $message &= @CRLF & @CRLF & @CRLF & "Г‘ГЇГЁГ±Г®ГЄ ГіГ±ГІГ Г­Г®ГўГ«ГҐГ­Г­Г»Гµ Гі ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«Гї ГЇГ°ГЁГ­ГІГҐГ°Г®Гў:" & @CRLF
 		 For $i = 1 To UBound($arrPrinterList) - 1
 			$message = $message & $arrPrinterList[$i] & @CRLF
 		 Next
@@ -708,7 +708,7 @@ Func SendMessage($needToSendAttachments)
    ProgressSet(40)
 
    Local $responce = _INetSmtpMailCom("172.16.6.6", "Auto request", "auto_request@7828882.ru", _
-						"stp@7828882.ru", "Обращение через приложение STP", $message, $attachments, "", "", _
+						"stp@7828882.ru", "ГЋГЎГ°Г Г№ГҐГ­ГЁГҐ Г·ГҐГ°ГҐГ§ ГЇГ°ГЁГ«Г®Г¦ГҐГ­ГЁГҐ STP", $message, $attachments, "", "", _
 						"auto_request@7828882.ru", "821973")
    ProgressSet(100)
    ProgressOff()
@@ -716,11 +716,11 @@ Func SendMessage($needToSendAttachments)
    Local $error = @error
    If $responce = 0 And $error = 0 Then
 	  $tmp = MsgBox(BitOR($MB_ICONQUESTION, $MB_YESNO), "", _
-		 "Ваше обращение успешно отправлено!" & @CRLF & @CRLF & _
-		 "Благодарим за обращение в службу технической поддержки." & @CRLF & _
-		 "В ближайщее время с Вами свяжется специалист ИТ отдела," & @CRLF & _
-		 "ответственный за выполнение данного обращения." & @CRLF & @CRLF & _
-		 "Выйти из приложения?")
+		 "Г‚Г ГёГҐ Г®ГЎГ°Г Г№ГҐГ­ГЁГҐ ГіГ±ГЇГҐГёГ­Г® Г®ГІГЇГ°Г ГўГ«ГҐГ­Г®!" & @CRLF & @CRLF & _
+		 "ГЃГ«Г ГЈГ®Г¤Г Г°ГЁГ¬ Г§Г  Г®ГЎГ°Г Г№ГҐГ­ГЁГҐ Гў Г±Г«ГіГ¦ГЎГі ГІГҐГµГ­ГЁГ·ГҐГ±ГЄГ®Г© ГЇГ®Г¤Г¤ГҐГ°Г¦ГЄГЁ." & @CRLF & _
+		 "Г‚ ГЎГ«ГЁГ¦Г Г©Г№ГҐГҐ ГўГ°ГҐГ¬Гї Г± Г‚Г Г¬ГЁ Г±ГўГїГ¦ГҐГІГ±Гї Г±ГЇГҐГ¶ГЁГ Г«ГЁГ±ГІ Г€Г’ Г®ГІГ¤ГҐГ«Г ," & @CRLF & _
+		 "Г®ГІГўГҐГІГ±ГІГўГҐГ­Г­Г»Г© Г§Г  ГўГ»ГЇГ®Г«Г­ГҐГ­ГЁГҐ Г¤Г Г­Г­Г®ГЈГ® Г®ГЎГ°Г Г№ГҐГ­ГЁГї." & @CRLF & @CRLF & _
+		 "Г‚Г»Г©ГІГЁ ГЁГ§ ГЇГ°ГЁГ«Г®Г¦ГҐГ­ГЁГї?")
 	  Switch $tmp
 	  Case $IDYES
 		 DeleteScreenshots()
@@ -848,9 +848,9 @@ Func HandleComError()
 	  Return
    EndIf
 
-   Msgbox($MB_ICONERROR, "Обращение в техподдержку", "Возникла ошибка при отправке." & @CRLF & _
-			"Обратитесь в техподдержку по телефону: 603 или 30-494"    & @CRLF  & @CRLF & _
-			"Описание ошибки: " & @TAB & $oMyError.description);  & @CRLF & _
+   Msgbox($MB_ICONERROR, "ГЋГЎГ°Г Г№ГҐГ­ГЁГҐ Гў ГІГҐГµГЇГ®Г¤Г¤ГҐГ°Г¦ГЄГі", "Г‚Г®Г§Г­ГЁГЄГ«Г  Г®ГёГЁГЎГЄГ  ГЇГ°ГЁ Г®ГІГЇГ°Г ГўГЄГҐ." & @CRLF & _
+			"ГЋГЎГ°Г ГІГЁГІГҐГ±Гј Гў ГІГҐГµГЇГ®Г¤Г¤ГҐГ°Г¦ГЄГі ГЇГ® ГІГҐГ«ГҐГґГ®Г­Гі: 603 ГЁГ«ГЁ 30-494"    & @CRLF  & @CRLF & _
+			"ГЋГЇГЁГ±Г Г­ГЁГҐ Г®ГёГЁГЎГЄГЁ: " & @TAB & $oMyError.description);  & @CRLF & _
 			;"err.windescription:"   & @TAB & $oMyError.windescription & @CRLF & _
 			;"err.number is: "       & @TAB & hex($oMyError.number,8)  & @CRLF & _
 			;"err.lastdllerror is: "   & @TAB & $oMyError.lastdllerror   & @CRLF & _
