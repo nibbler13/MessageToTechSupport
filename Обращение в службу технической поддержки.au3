@@ -27,28 +27,28 @@ ReadUserInfo()
 $Form1 = GUICreate("", 600, 450, -1, -1)
 GUISetFont(10, $FW_NORMAL , 0, "Arial", $Form1, $CLEARTYPE_QUALITY)
 
-$Label1 = GUICtrlCreateLabel("Обращение в службу технической поддержки клиники Будь Здоров", 10, 10, 580, 20, $SS_CENTER)
+$Label1 = GUICtrlCreateLabel("ГЋГЎГ°Г Г№ГҐГ­ГЁГҐ Гў Г±Г«ГіГ¦ГЎГі ГІГҐГµГ­ГЁГ·ГҐГ±ГЄГ®Г© ГЇГ®Г¤Г¤ГҐГ°Г¦ГЄГЁ ГЄГ«ГЁГ­ГЁГЄГЁ ГЃГіГ¤Гј Г‡Г¤Г®Г°Г®Гў", 10, 10, 580, 20, $SS_CENTER)
 GUICtrlSetFont(-1, 11, $FW_SEMIBOLD)
 GUICtrlSetColor(-1, "0x3030AA")
-$Label5 = GUICtrlCreateLabel("внутренний номер: 603    для регионов: 30-494    городской: (495) 782-88-82", 10, 30, 580, 20, $SS_CENTER)
+$Label5 = GUICtrlCreateLabel("ГўГ­ГіГІГ°ГҐГ­Г­ГЁГ© Г­Г®Г¬ГҐГ°: 603    Г¤Г«Гї Г°ГҐГЈГЁГ®Г­Г®Гў: 30-494    ГЈГ®Г°Г®Г¤Г±ГЄГ®Г©: (495) 782-88-82", 10, 30, 580, 20, $SS_CENTER)
 GUICtrlSetColor(-1, $COLOR_GRAY)
 
-$Group1 = GUICtrlCreateGroup("Укажите информацию о себе:", 10, 70, 580, 124)
+$Group1 = GUICtrlCreateGroup("Г“ГЄГ Г¦ГЁГІГҐ ГЁГ­ГґГ®Г°Г¬Г Г¶ГЁГѕ Г® Г±ГҐГЎГҐ:", 10, 70, 580, 124)
 GUICtrlSetFont(-1, 10,  $FW_SEMIBOLD)
 
-$Label2 = GUICtrlCreateLabel("Контактный номер телефона:", 20, 103, 180, 20, $SS_RIGHT)
+$Label2 = GUICtrlCreateLabel("ГЉГ®Г­ГІГ ГЄГІГ­Г»Г© Г­Г®Г¬ГҐГ° ГІГҐГ«ГҐГґГ®Г­Г :", 20, 103, 180, 20, $SS_RIGHT)
 $Input1 = GUICtrlCreateInput("", 210, 100, 363, 24)
 If $telephoneNumber <> "" Then
    GUICtrlSetData(-1, $telephoneNumber)
 EndIf
 
-$Label3 = GUICtrlCreateLabel("Номер кабинета:", 20, 133, 180, 20, $SS_RIGHT)
+$Label3 = GUICtrlCreateLabel("ГЌГ®Г¬ГҐГ° ГЄГ ГЎГЁГ­ГҐГІГ :", 20, 133, 180, 20, $SS_RIGHT)
 $Input2 = GUICtrlCreateInput("", 210, 130, 363, 24)
 If $physicalDeliveryOfficeName <> "" Then
    GUICtrlSetData(-1, $physicalDeliveryOfficeName)
 EndIf
 
-$Label4 = GUICtrlCreateLabel("ФИО:", 20, 163, 180, 20, $SS_RIGHT)
+$Label4 = GUICtrlCreateLabel("Г”Г€ГЋ:", 20, 163, 180, 20, $SS_RIGHT)
 $Input3 = GUICtrlCreateInput("", 210, 160, 363, 24)
 If $userName <> "" Then
    GUICtrlSetData(-1, $userName)
@@ -58,13 +58,13 @@ EndIf
 
 GUICtrlCreateGroup("", -99, -99, 1, 1)
 
-$Group2 = GUICtrlCreateGroup("Текст вашего обращения:", 10, 200, 580, 190)
+$Group2 = GUICtrlCreateGroup("Г’ГҐГЄГ±ГІ ГўГ ГёГҐГЈГ® Г®ГЎГ°Г Г№ГҐГ­ГЁГї:", 10, 200, 580, 190)
 GUICtrlSetFont(-1, 10,  $FW_SEMIBOLD)
 $Edit1 = GUICtrlCreateEdit("", 20, 230, 560, 150, BitOR($ES_AUTOVSCROLL,$ES_WANTRETURN,$WS_VSCROLL))
 GUICtrlSetState(-1, $GUI_FOCUS)
 GUICtrlCreateGroup("", -99, -99, 1, 1)
 
-$Button1 = GUICtrlCreateButton("Отправить обращение", 200, 400, 200, 40)
+$Button1 = GUICtrlCreateButton("ГЋГІГЇГ°Г ГўГЁГІГј Г®ГЎГ°Г Г№ГҐГ­ГЁГҐ", 200, 400, 200, 40)
 
 GUISetState(@SW_SHOW)
 #EndRegion ### END Koda GUI section ###
@@ -80,20 +80,20 @@ While 1
 		 Local $tempString = ""
 
 		 If GUICtrlRead ($Input1) = "" Then
-			$tempString = $tempString & "Необходимо указать контактный номер телефона" & @CRLF
+			$tempString = $tempString & "ГЌГҐГ®ГЎГµГ®Г¤ГЁГ¬Г® ГіГЄГ Г§Г ГІГј ГЄГ®Г­ГІГ ГЄГІГ­Г»Г© Г­Г®Г¬ГҐГ° ГІГҐГ«ГҐГґГ®Г­Г " & @CRLF
 		 EndIf
 
 		 If GUICtrlRead ($Input2) = "" Then
-			$tempString = $tempString & "Необходимо указать номер кабинета" & @CRLF
+			$tempString = $tempString & "ГЌГҐГ®ГЎГµГ®Г¤ГЁГ¬Г® ГіГЄГ Г§Г ГІГј Г­Г®Г¬ГҐГ° ГЄГ ГЎГЁГ­ГҐГІГ " & @CRLF
 		 EndIf
 
 
 		 If GUICtrlRead ($Input3) = "" Then
-			$tempString = $tempString & "Необходимо указать ФИО" & @CRLF
+			$tempString = $tempString & "ГЌГҐГ®ГЎГµГ®Г¤ГЁГ¬Г® ГіГЄГ Г§Г ГІГј Г”Г€ГЋ" & @CRLF
 		 EndIf
 
 		 If GUICtrlRead ($Edit1) = "" Then
-			$tempString = $tempString & "Необходимо написать текст обращения" & @CRLF
+			$tempString = $tempString & "ГЌГҐГ®ГЎГµГ®Г¤ГЁГ¬Г® Г­Г ГЇГЁГ±Г ГІГј ГІГҐГЄГ±ГІ Г®ГЎГ°Г Г№ГҐГ­ГЁГї" & @CRLF
 		 EndIf
 
 		 If $tempString <> "" Then
@@ -105,40 +105,40 @@ While 1
 WEnd
 
 Func SendMessage()
-   Local $message = GUICtrlRead($Edit1) & @CRLF & @CRLF & @CRLF & "Инициатор:" & @TAB & @TAB & GUICtrlRead ($Input3) & @CRLF & _
-					 "Контактный тел.:" & @TAB & GUICtrlRead ($Input1) & @CRLF & _
-					 "Номер кабинета:" & @TAB & GUICtrlRead ($Input2) & @CRLF & @CRLF
+   Local $message = GUICtrlRead($Edit1) & @CRLF & @CRLF & @CRLF & "Г€Г­ГЁГ¶ГЁГ ГІГ®Г°:" & @TAB & @TAB & GUICtrlRead ($Input3) & @CRLF & _
+					 "ГЉГ®Г­ГІГ ГЄГІГ­Г»Г© ГІГҐГ«.:" & @TAB & GUICtrlRead ($Input1) & @CRLF & _
+					 "ГЌГ®Г¬ГҐГ° ГЄГ ГЎГЁГ­ГҐГІГ :" & @TAB & GUICtrlRead ($Input2) & @CRLF & @CRLF
 
    If $city <> "" Then
-	  $message = $message & "Подразделение:" & @TAB & $city & @CRLF
+	  $message = $message & "ГЏГ®Г¤Г°Г Г§Г¤ГҐГ«ГҐГ­ГЁГҐ:" & @TAB & $city & @CRLF
    EndIf
 
    If $department <> "" Then
-	  $message = $message & "Отдел:" & @TAB & @TAB & @TAB & $department & @CRLF
+	  $message = $message & "ГЋГІГ¤ГҐГ«:" & @TAB & @TAB & @TAB & $department & @CRLF
    EndIf
 
    If $title <> "" Then
-	  $message = $message & "Должность:" & @TAB & @TAB & $title & @CRLF
+	  $message = $message & "Г„Г®Г«Г¦Г­Г®Г±ГІГј:" & @TAB & @TAB & $title & @CRLF
    EndIf
 
    If $mail <> "" Then
-	  $message = $message & "Почта:" & @TAB & @TAB & @TAB & $mail & @CRLF
+	  $message = $message & "ГЏГ®Г·ГІГ :" & @TAB & @TAB & @TAB & $mail & @CRLF
    EndIf
 
    If $userPrincipalName <> "" Then
-	  $message = $message & "Учетная запись:" & @TAB & $userPrincipalName & @CRLF
+	  $message = $message & "Г“Г·ГҐГІГ­Г Гї Г§Г ГЇГЁГ±Гј:" & @TAB & $userPrincipalName & @CRLF
    EndIf
 
-   $message = $message & @CRLF & "Имя компьютера:" & @TAB & @ComputerName & @CRLF & _
-						"Имя пользователя:" & @TAB & @UserName & @CRLF & _
-						"Версия ОС:" & @TAB & @TAB & @OSVersion & @CRLF & _
-						"Архитектура ОС:" & @TAB & @OSArch & @CRLF & _
-						"IP адрес:" & @TAB & @TAB & @IPAddress1 & @CRLF & _
-						"Дата обращения:" & @TAB & @YEAR & "." & @MON & "." & @MDAY & "     " & @HOUR & ":" & @MIN
+   $message = $message & @CRLF & "Г€Г¬Гї ГЄГ®Г¬ГЇГјГѕГІГҐГ°Г :" & @TAB & @ComputerName & @CRLF & _
+						"Г€Г¬Гї ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«Гї:" & @TAB & @UserName & @CRLF & _
+						"Г‚ГҐГ°Г±ГЁГї ГЋГ‘:" & @TAB & @TAB & @OSVersion & @CRLF & _
+						"ГЂГ°ГµГЁГІГҐГЄГІГіГ°Г  ГЋГ‘:" & @TAB & @OSArch & @CRLF & _
+						"IP Г Г¤Г°ГҐГ±:" & @TAB & @TAB & @IPAddress1 & @CRLF & _
+						"Г„Г ГІГ  Г®ГЎГ°Г Г№ГҐГ­ГЁГї:" & @TAB & @YEAR & "." & @MON & "." & @MDAY & "     " & @HOUR & ":" & @MIN
 
    If IsArray($arrPrinterList) Then
 	  If UBound($arrPrinterList) > 1 Then
-		 $message = $message & @CRLF & @CRLF & "Список установленных у пользователя принтеров:" & @CRLF
+		 $message = $message & @CRLF & @CRLF & "Г‘ГЇГЁГ±Г®ГЄ ГіГ±ГІГ Г­Г®ГўГ«ГҐГ­Г­Г»Гµ Гі ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«Гї ГЇГ°ГЁГ­ГІГҐГ°Г®Гў:" & @CRLF
 		 For $i = 1 To UBound($arrPrinterList) - 1
 			$message = $message & $arrPrinterList[$i] & @CRLF
 		 Next
@@ -146,18 +146,18 @@ Func SendMessage()
    EndIf
 
 
-   Local $responce = _INetSmtpMailCom("172.16.6.6", "Auto request", "auto_request@7828882.ru", _
-						"stp@7828882.ru", "Обращение через приложение STP", $message, "", "", "", _
-						"auto_request@7828882.ru", "821973")
+   Local $responce = _INetSmtpMailCom("172.16.6.6", "Auto request", "_____@_____.ru", _
+						"_____@_____.ru", "ГЋГЎГ°Г Г№ГҐГ­ГЁГҐ Г·ГҐГ°ГҐГ§ ГЇГ°ГЁГ«Г®Г¦ГҐГ­ГЁГҐ STP", $message, "", "", "", _
+						"_____", "_______")
 
    Local $error = @error
    If $responce = 0 And $error = 0 Then
 	  $tmp = MsgBox(BitOR($MB_ICONQUESTION, $MB_YESNO), "", _
-		 "Ваше обращение успешно отправлено!" & @CRLF & @CRLF & _
-		 "Благодарим за обращение в службу технической поддержки." & @CRLF & _
-		 "В ближайщее время с Вами свяжется специалист ИТ отдела," & @CRLF & _
-		 "ответственный за выполнение данного обращения." & @CRLF & @CRLF & _
-		 "Выйти из приложения?")
+		 "Г‚Г ГёГҐ Г®ГЎГ°Г Г№ГҐГ­ГЁГҐ ГіГ±ГЇГҐГёГ­Г® Г®ГІГЇГ°Г ГўГ«ГҐГ­Г®!" & @CRLF & @CRLF & _
+		 "ГЃГ«Г ГЈГ®Г¤Г Г°ГЁГ¬ Г§Г  Г®ГЎГ°Г Г№ГҐГ­ГЁГҐ Гў Г±Г«ГіГ¦ГЎГі ГІГҐГµГ­ГЁГ·ГҐГ±ГЄГ®Г© ГЇГ®Г¤Г¤ГҐГ°Г¦ГЄГЁ." & @CRLF & _
+		 "Г‚ ГЎГ«ГЁГ¦Г Г©Г№ГҐГҐ ГўГ°ГҐГ¬Гї Г± Г‚Г Г¬ГЁ Г±ГўГїГ¦ГҐГІГ±Гї Г±ГЇГҐГ¶ГЁГ Г«ГЁГ±ГІ Г€Г’ Г®ГІГ¤ГҐГ«Г ," & @CRLF & _
+		 "Г®ГІГўГҐГІГ±ГІГўГҐГ­Г­Г»Г© Г§Г  ГўГ»ГЇГ®Г«Г­ГҐГ­ГЁГҐ Г¤Г Г­Г­Г®ГЈГ® Г®ГЎГ°Г Г№ГҐГ­ГЁГї." & @CRLF & @CRLF & _
+		 "Г‚Г»Г©ГІГЁ ГЁГ§ ГЇГ°ГЁГ«Г®Г¦ГҐГ­ГЁГї?")
 	  Switch $tmp
 	  Case $IDYES
 		 Exit
@@ -277,9 +277,9 @@ Func HandleComError()
 	  Return
    EndIf
 
-   Msgbox($MB_ICONERROR, "Обращение в техподдержку", "Возникла ошибка при отправке." & @CRLF & _
-			"Обратитесь в техподдержку по телефону: 603 или 30-494"    & @CRLF  & @CRLF & _
-			"Описание ошибки: " & @TAB & $oMyError.description);  & @CRLF & _
+   Msgbox($MB_ICONERROR, "ГЋГЎГ°Г Г№ГҐГ­ГЁГҐ Гў ГІГҐГµГЇГ®Г¤Г¤ГҐГ°Г¦ГЄГі", "Г‚Г®Г§Г­ГЁГЄГ«Г  Г®ГёГЁГЎГЄГ  ГЇГ°ГЁ Г®ГІГЇГ°Г ГўГЄГҐ." & @CRLF & _
+			"ГЋГЎГ°Г ГІГЁГІГҐГ±Гј Гў ГІГҐГµГЇГ®Г¤Г¤ГҐГ°Г¦ГЄГі ГЇГ® ГІГҐГ«ГҐГґГ®Г­Гі: 603 ГЁГ«ГЁ 30-494"    & @CRLF  & @CRLF & _
+			"ГЋГЇГЁГ±Г Г­ГЁГҐ Г®ГёГЁГЎГЄГЁ: " & @TAB & $oMyError.description);  & @CRLF & _
 			;"err.windescription:"   & @TAB & $oMyError.windescription & @CRLF & _
 			;"err.number is: "       & @TAB & hex($oMyError.number,8)  & @CRLF & _
 			;"err.lastdllerror is: "   & @TAB & $oMyError.lastdllerror   & @CRLF & _
