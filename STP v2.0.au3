@@ -707,9 +707,9 @@ Func SendMessage($needToSendAttachments)
 
    ProgressSet(40)
 
-   Local $responce = _INetSmtpMailCom("172.16.6.6", "Auto request", "auto_request@7828882.ru", _
-						"stp@7828882.ru", "Îáðàùåíèå ÷åðåç ïðèëîæåíèå STP", $message, $attachments, "", "", _
-						"auto_request@7828882.ru", "821973")
+   Local $responce = _INetSmtpMailCom("172.16.6.6", "Auto request", "_____@_____.ru", _
+						"_____@_____.ru", "Îáðàùåíèå ÷åðåç ïðèëîæåíèå STP", $message, $attachments, "", "", _
+						"_____@_____.ru", "_____")
    ProgressSet(100)
    ProgressOff()
 
