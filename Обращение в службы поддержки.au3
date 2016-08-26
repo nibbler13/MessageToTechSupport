@@ -4,7 +4,7 @@
 #pragma compile(UPX, true)
 #pragma compile(CompanyName, 'ООО Клиника ЛМС')
 #pragma compile(FileDescription, Программа для создания и отправки обращения в службы поддержки)
-#pragma compile(LegalCopyright, Грашкин Павел Павлович - Нижний Новгород)
+#pragma compile(LegalCopyright, Грашкин Павел Павлович - Нижний Новгород - 31-555 - nn-admin@bzklinika.ru)
 #pragma compile(ProductName, Обращение в службы поддержки)
 #EndRegion ;**** Directives created by AutoIt3Wrapper_GUI ***
 
@@ -77,7 +77,7 @@ Local $monWid = 0
 Local $monHei = 0
 Local $screenShotList[0]
 Local $totalSize = 0
-Local $emailTo = ""
+Local $emailTo = "stp@7828882.ru"
 Local $winHeader = ""
 Local $icon = ""
 Local $color = ""
@@ -121,16 +121,16 @@ FormDepartmentSelectGui()
 Func FormDepartmentSelectGui()
 	$mainGui = GUICreate("", $dX, $dY)
 
-	GUISetFont($fontMainSize, $FW_NORMAL, -1, $fontName, $mainGui, $CLEARTYPE_QUALITY)
+	GUISetFont($fontTitleSize, $FW_NORMAL, -1, $fontName, $mainGui, $CLEARTYPE_QUALITY)
 
-	Local $selectTitleLabel = GUICtrlCreateLabel("Выберите отдел, в который адресовано Ваше обращение:", _
+	Local $selectTitleLabel = GUICtrlCreateLabel("Выберите службу, в которую адресовано Ваше обращение:", _
 		$currentX, $currentY, $dX - $currentX * 2, -1, BitOR($SS_CENTERIMAGE, $SS_CENTER))
-	GUICtrlSetFont(-1, $fontTitleSize)
+;~ 	GUICtrlSetFont(-1, $fontTitleSize)
 	GUICtrlSetColor(-1, $headerTitleColor)
 
-	Local $str1 = "          Техническая поддержка информационных систем        "
-	Local $str2 = "    Эксплуатация и тех. обслуживание зданий и сооружений   "
-	Local $str3 = "  Сервисное обсулуживание медицинского оборудования "
+	Local $str1 = "     Техническая поддержка     " & @CRLF & "пользователей ПК"
+	Local $str2 = "     Эксплуатация и техническое обслуживание     " & @CRLF & "зданий и сооружений"
+	Local $str3 = "Сервисное обслуживание" & @CRLF & "     медицинского оборудования     "
 
 	UpdateCurrentY($selectTitleLabel)
 	$currentY -= $gapSize
@@ -160,36 +160,36 @@ Func FormDepartmentSelectGui()
 	While 1
 		Local $nMsg = GUIGetMsg()
 		Switch $nMsg
-		Case $selectBut1
-			$winHeader = "Обращение в отдел технической поддержки" & @CRLF & "информационных систем"
-			$icon = $file1
-			$color = $color1
-			$exitingMessage = "Благодарим за обращение в службу технической поддержки." & @CRLF & _
-								"В ближайщее время с Вами свяжется специалист ИТ отдела," & @CRLF & _
-								"ответственный за выполнение данного обращения." & @CRLF & @CRLF
-			ExitLoop
+			Case $selectBut1
+				$winHeader = "Обращение в службу технической поддержки" & @CRLF & "пользователей ПК"
+				$icon = $file1
+				$color = $color1
+				$exitingMessage = "Благодарим за обращение в службу технической поддержки." & @CRLF & _
+									"В ближайщее время с Вами свяжется специалист ИТ отдела," & _
+									"ответственный за выполнение данного обращения." & @CRLF & @CRLF
+				ExitLoop
 
-		Case $selectBut2
-			$winHeader = "Обращение в отдел эксплуатации и технического" & @CRLF & "обслуживания зданий и сооружений"
-			$icon = $file2
-			$color = $color2
-			$exitingMessage = "Благодарим за обращение в службу эксплуатации здания." & @CRLF & _
-								"В ближайщее время с Вами свяжется инженер по эксплуатации," & @CRLF & _
-								"ответственный за выполнение данного обращения." & @CRLF & @CRLF
-			ExitLoop
+			Case $selectBut2
+				$winHeader = "Обращение в службу эксплуатации и технического" & @CRLF & "обслуживания зданий и сооружений"
+				$icon = $file2
+				$color = $color2
+				$exitingMessage = "Благодарим за обращение в службу эксплуатации здания." & @CRLF & _
+									"В ближайщее время с Вами свяжется инженер по эксплуатации здания," & _
+									"ответственный за выполнение данного обращения." & @CRLF & @CRLF
+				ExitLoop
 
-		Case $selectBut3
-			$winHeader = "Обращение в отдел сервисного обслуживания" & @CRLF & "медицинского оборудования"
-			$icon = $file3
-			$color = $color3
-			$emailTo = "sos@7828882.ru"
-			$exitingMessage = "Благодарим за обращение в службу обслуживания медицинского оборудования." & @CRLF & _
-								"В ближайщее время с Вами свяжется инженер по медицинскому оборудованию," & @CRLF & _
-								"ответственный за выполнение данного обращения." & @CRLF & @CRLF
-			ExitLoop
+			Case $selectBut3
+				$winHeader = "Обращение в службу сервисного обслуживания" & @CRLF & "медицинского оборудования"
+				$icon = $file3
+				$color = $color3
+				$emailTo = "sos@7828882.ru"
+				$exitingMessage = "Благодарим за обращение в службу обслуживания медицинского оборудования." & @CRLF & _
+									"В ближайщее время с Вами свяжется инженер по медицинскому оборудованию," & _
+									"ответственный за выполнение данного обращения." & @CRLF & @CRLF
+				ExitLoop
 
-		Case $GUI_EVENT_CLOSE
-			Exit
+			Case $GUI_EVENT_CLOSE
+				Exit
 		EndSwitch
 	WEnd
 
@@ -884,12 +884,12 @@ EndFunc
 Func SendMessage($needToSendAttachments)
 	ProgressOn("", "Идет отправка...", "Пожалуйста, пожождите", -1, -1, $DLG_MOVEABLE)
 
-	Local $message = ""
+	Local $message = StringReplace($winHeader, @CRLF, " ") & @CRLF & @CRLF
 
 	If GUICtrlRead($criticalCheckbox) = $GUI_CHECKED Then _
-		$message &= ControlGetText($mainGui, "", $criticalCheckbox) & @CRLF & @CRLF
+		$message &= "Внимание! " & ControlGetText($mainGui, "", $criticalCheckbox) & @CRLF & @CRLF
 
-	$message &= GUICtrlRead($ticketTextEdit) & @CRLF
+	$message &= "Текст обращения:" & @CRLF & GUICtrlRead($ticketTextEdit) & @CRLF
 
 	Local $attachments = ""
 	If $needToSendAttachments Then
@@ -943,9 +943,9 @@ Func SendMessage($needToSendAttachments)
 
    ProgressSet(40)
 
-   Local $responce = _INetSmtpMailCom("", "Auto request", "", _
+   Local $responce = _INetSmtpMailCom("172.16.6.6", "Auto request", "auto_request@7828882.ru", _
 						$emailTo, "Обращение через приложение STP", $message, $attachments, "", "", _
-						"", "")
+						"auto_request@7828882.ru", "821973")
    ProgressSet(100)
    ProgressOff()
 
